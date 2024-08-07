@@ -31,26 +31,28 @@
     </tbody>
   </table>
 
-  <div v-show="showEdit">
-    <h2>編輯區</h2>
-    <ul class="editArea">
-      <li>
-        <span>修改品項：</span><input type="text" v-model="newDD.name" /> <span>預覽：</span
-        ><i>{{ newDD.name }}</i>
-      </li>
-      <li>
-        <span>修改描述：</span><input type="text" v-model="newDD.detail" /> <span>預覽：</span
-        ><i>{{ newDD.detail }}</i>
-      </li>
-      <li>
-        <span>修改價格：</span><input type="text" v-model="newDD.price" /> <span>預覽：</span
-        ><i>{{ newDD.price }}</i>
-      </li>
-    </ul>
+  <div class="editBg" v-show="showEdit">
+    <div class="editBox">
+      <h2>修改商品</h2>
+      <ul class="editArea">
+        <li>
+          <span>修改品項：</span><input type="text" v-model="newDD.name" /> <span>預覽：</span
+          ><i>{{ newDD.name }}</i>
+        </li>
+        <li>
+          <span>修改描述：</span><input type="text" v-model="newDD.detail" /> <span>預覽：</span
+          ><i>{{ newDD.detail }}</i>
+        </li>
+        <li>
+          <span>修改價格：</span><input type="text" v-model="newDD.price" /> <span>預覽：</span
+          ><i>{{ newDD.price }}</i>
+        </li>
+      </ul>
 
-    <div class="btn2">
-      <button type="button" @click="saveDD">儲存變更</button>
-      <button type="button" @click="cancelEdit">取消</button>
+      <div class="btn2">
+        <button type="button" @click="saveDD">儲存變更</button>
+        <button type="button" @click="cancelEdit">取消</button>
+      </div>
     </div>
   </div>
 </template>
@@ -156,8 +158,10 @@ const saveDD = () => {
   //更新原有的array
   drinks.value[index] = newDD.value
   newDD.value = {}
+  showEdit.value = false
 }
 const cancelEdit = () => {
   newDD.value = {}
+  showEdit.value = false
 }
 </script>
