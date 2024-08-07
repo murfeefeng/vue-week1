@@ -155,7 +155,7 @@ const saveDD = () => {
   //找對應的index
   const index = drinks.value.findIndex((item) => item.id === newDD.value.id)
   console.log(index)
-  //更新原有的array
+  //更新原有的array 
   drinks.value[index] = newDD.value
   newDD.value = {}
   showEdit.value = false
