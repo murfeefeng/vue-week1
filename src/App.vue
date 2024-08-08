@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       <tr v-for="dd in drinks" :key="dd.id">
-        <td>{{ dd.name }}</td>
+        <td>{{ dd.name }} </td>
         <td>
           <small>{{ dd.detail }}</small>
         </td>
