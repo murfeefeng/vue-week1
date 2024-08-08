@@ -35,20 +35,20 @@
       <h2>修改商品</h2>
       <ul class="editArea">
         <li>
-          <span>修改品項：</span><input type="text" v-model="newDD.name" /> <span>預覽：</span
+          <span>更新品項：</span><input type="text" v-model="newDD.name" /> <span>預覽：</span
           ><i>{{ newDD.name }}</i>
         </li>
         <li>
-          <span>修改描述：</span><input type="text" v-model="newDD.detail" /> <span>預覽：</span
+          <span>更新描述：</span><input type="text" v-model="newDD.detail" /> <span>預覽：</span
           ><i>{{ newDD.detail }}</i>
         </li>
         <li>
-          <span>修改價格：</span><input type="text" v-model="newDD.price" /> <span>預覽：</span
+          <span>更新價格：</span><input type="text" v-model="newDD.price" /> <span>預覽：</span
           ><i>{{ newDD.price }}</i>
         </li>
       </ul>
       <div class="btn2">
-        <button type="button" @click="saveDD">儲存變更</button>
+        <button type="button" @click="saveDD">儲存</button>
         <button type="button" @click="cancelEdit">取消</button>
       </div>
     </div>
